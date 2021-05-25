@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://World/CliffTileset.png" type="Texture" id=5]
 [ext_resource path="res://World/Grass.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=7]
+[ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=8]
+[ext_resource path="res://World/Tree.tscn" type="PackedScene" id=9]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -513,26 +515,14 @@ position = Vector2( 128, 56 )
 [node name="Bush" parent="YSort/Bushes" instance=ExtResource( 1 )]
 position = Vector2( 30.0406, 39.8572 )
 
-[node name="Bush2" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 200, 16 )
-
-[node name="Bush9" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 239.296, 144.837 )
-
 [node name="Bush4" parent="YSort/Bushes" instance=ExtResource( 1 )]
 position = Vector2( 186.388, 152 )
-
-[node name="Bush5" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 272, 112 )
 
 [node name="Bush6" parent="YSort/Bushes" instance=ExtResource( 1 )]
 position = Vector2( 90.8062, 111.296 )
 
 [node name="Bush7" parent="YSort/Bushes" instance=ExtResource( 1 )]
 position = Vector2( 243.51, 44.9083 )
-
-[node name="Bush8" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 88, 48 )
 
 [node name="Grass" type="YSort" parent="YSort"]
 
@@ -582,10 +572,26 @@ position = Vector2( 239.161, 13.6657 )
 position = Vector2( 220.284, 14.1377 )
 
 [node name="Bat" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 256, 72 )
+position = Vector2( 248, 80 )
 
 [node name="Bat2" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 16, 64 )
+position = Vector2( 48, 72 )
 
 [node name="Bat3" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 216, 136 )
+position = Vector2( 184, 128 )
+
+[node name="Trees" type="YSort" parent="YSort"]
+
+[node name="Tree" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 272, 120 )
+
+[node name="Tree2" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 272, 48 )
+
+[node name="Tree3" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 200, 16 )
+
+[node name="Tree4" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 80, 48 )
+
+[node name="HealthUI" parent="." instance=ExtResource( 8 )]
