@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://World/DirtTileset.png" type="Texture" id=4]
 [ext_resource path="res://World/CliffTileset.png" type="Texture" id=5]
 [ext_resource path="res://World/Grass.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=7]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -484,7 +485,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 [node name="World" type="Node2D"]
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 160, 90 )
+position = Vector2( 160, 88 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 320, 180 )
@@ -498,6 +499,7 @@ tile_data = PoolIntArray( 9, 0, 0, 10, 0, 2, 65545, 0, 65536, 65546, 0, 65538, 1
 [node name="CliffTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 49 )
 cell_size = Vector2( 32, 32 )
+collision_mask = 0
 format = 1
 tile_data = PoolIntArray( -65536, 0, 0, -65535, 0, 1, -65534, 0, 1, -65533, 0, 2, -65528, 0, 0, -65527, 0, 1, -65526, 0, 2, 0, 0, 131072, 1, 0, 131073, 2, 0, 131073, 3, 0, 131074, 8, 0, 131072, 9, 0, 65544, 10, 0, 131074, 65545, 0, 131075, 196612, 0, 3, 196617, 0, 0, 196618, 0, 1, 196619, 0, 2, 262144, 0, 0, 262145, 0, 1, 262146, 0, 1, 262147, 0, 1, 262148, 0, 131079, 262152, 0, 196608, 262153, 0, 196617, 262154, 0, 131073, 262155, 0, 131074, 327680, 0, 131072, 327681, 0, 131073, 327682, 0, 131073, 327683, 0, 131073, 327684, 0, 131074, 327689, 0, 131075 )
 
@@ -578,3 +580,12 @@ position = Vector2( 239.161, 13.6657 )
 
 [node name="Grass10" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( 220.284, 14.1377 )
+
+[node name="Bat" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 256, 72 )
+
+[node name="Bat2" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 16, 64 )
+
+[node name="Bat3" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 216, 136 )
