@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
+const BatExp = preload("res://Enemies/Bat.tscn")
 
 export var FRICTION = 500
 export var ACCELERATION = 500
@@ -25,12 +26,23 @@ onready var swordHitBox = $HitboxPivot/SwordHitBox
 onready var hurtBox =  $HurtBox
 onready var blinkAnimationPlayer = $BlinkAnimationPlayer
 
+
 func _ready():
 	randomize()
 	stats.connect("no_health", self, "queue_free")
+	stats.connect("get_exp",self,"on_exp_get")
+	stats.connect("level_up",self,"on_level_up")
 	animationTree.active = true
 	swordHitBox.knockback_vector = roll_vector
 
+func on_exp_get(value):
+	$Exp.text = "EXP: " + str(value)
+	$AnimationPlayer.play("EXPFLOAT")
+	
+func on_level_up():
+	$LevelUp.text = "Level Up"
+	$AnimationPlayer.play("LevelUp")
+	
 func _physics_process(delta):
 	match state:
 		MOVE: 

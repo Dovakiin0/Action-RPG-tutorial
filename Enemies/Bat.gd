@@ -10,6 +10,8 @@ export var ACCELERATION = 300
 export var MAX_SPEED = 50
 export var FRICTION = 200
 
+export(int) var expDrop = 6
+
 enum {
 	IDLE,
 	WANDER,
@@ -87,6 +89,7 @@ func death_effect():
 	
 
 func _on_Stats_no_health():
+	PlayerStats.set_exp(expDrop)
 	death_effect()
 	queue_free()
 
