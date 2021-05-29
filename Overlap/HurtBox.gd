@@ -30,7 +30,6 @@ func create_hit_effect():
 func _on_Timer_timeout():
 	self.invincible = false
 
-
 func _on_HurtBox_invincibility_ended():
 	collisionShape.set_deferred("disabled", false)
 

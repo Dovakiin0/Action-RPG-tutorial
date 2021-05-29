@@ -11,3 +11,4 @@ func create_grass_effect():
 func _on_HurtBox_area_entered(area):
 	create_grass_effect()
 	queue_free()
+ 

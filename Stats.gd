@@ -12,6 +12,7 @@ signal max_health_changed(value)
 signal level_up
 signal get_exp(value)
 
+
 func set_exp(value):
 	cur_exp = cur_exp + value
 	emit_signal("get_exp", value)

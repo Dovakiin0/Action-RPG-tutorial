@@ -25,10 +25,11 @@ onready var animationState = animationTree.get("parameters/playback")
 onready var swordHitBox = $HitboxPivot/SwordHitBox
 onready var hurtBox =  $HurtBox
 onready var blinkAnimationPlayer = $BlinkAnimationPlayer
-
+onready var sword = $Sword
 
 func _ready():
 	randomize()
+	sword.visible = false
 	stats.connect("no_health", self, "queue_free")
 	stats.connect("get_exp",self,"on_exp_get")
 	stats.connect("level_up",self,"on_level_up")

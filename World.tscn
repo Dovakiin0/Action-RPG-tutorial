@@ -493,7 +493,10 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 position = Vector2( 160, 88 )
 texture = ExtResource( 3 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 587.291, 371.995 )
+region_rect = Rect2( -140.845, -248.35, 819.716, 726.497 )
+
+[node name="Bat" parent="Background" instance=ExtResource( 7 )]
+position = Vector2( -32, -320 )
 
 [node name="DirtPathTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
@@ -512,10 +515,10 @@ tile_data = PoolIntArray( -65536, 0, 0, -65535, 0, 1, -65534, 0, 1, -65533, 0, 2
 position = Vector2( 128, 56 )
 
 [node name="TopLeft" parent="Camera2D/Limits" index="0"]
-position = Vector2( -136, -96 )
+position = Vector2( -248, -272 )
 
 [node name="BottomRight" parent="Camera2D/Limits" index="1"]
-position = Vector2( 448, 272 )
+position = Vector2( 568, 448 )
 
 [node name="YSort" type="YSort" parent="."]
 

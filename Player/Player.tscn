@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://Player/Player.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Music and Sounds/Evade.wav" type="AudioStream" id=8]
 [ext_resource path="res://WhiteColor.shader" type="Shader" id=9]
 [ext_resource path="res://UI/StintUltraCondensed-Regular.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://test/Sword.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 9 )
@@ -907,6 +908,9 @@ custom_fonts/normal_font = SubResource( 53 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sword" parent="." instance=ExtResource( 11 )]
+position = Vector2( 14.9648, -4.16616 )
 
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
 [connection signal="invincibility_ended" from="HurtBox" to="." method="_on_HurtBox_invincibility_ended"]
